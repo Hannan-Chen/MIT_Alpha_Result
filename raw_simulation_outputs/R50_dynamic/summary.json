@@ -1,0 +1,64 @@
+{
+  "case": {
+    "case_id": "R50_dynamic",
+    "source_case": "R50",
+    "rescale_factor": 50,
+    "policy": "dynamic",
+    "fixed_mode": "MC",
+    "deltaT_K": 6.0,
+    "supply_setpoint_C": 15.0,
+    "feedback_s": 30,
+    "do_step_s": 10,
+    "input_grid_s": 300,
+    "duration_s": 86400,
+    "tolerance": 0.0001
+  },
+  "status": "completed",
+  "duration_s": 86400.0,
+  "warmup_s": 7200.0,
+  "rows_internal_day": 8640,
+  "rows_300s": 288,
+  "plant_energy_kWh": 7884.592110757577,
+  "component_energy_kWh": {
+    "P_Chillers_sum": 5106.621978406537,
+    "P_CHWPs_sum": 608.8730116594744,
+    "P_CDWPs_sum": 854.3771206915651,
+    "P_CTfans_sum": 1314.72
+  },
+  "Q_request_energy_kWh": 36418.001440279164,
+  "Q_hyd_energy_kWh": 36418.00144188224,
+  "energy_weighted_plant_COP": 4.6188821096013655,
+  "peak_endpoint_plant_power_W": 376362.944708341,
+  "supply_temperature_C_min": 15.000012813257968,
+  "supply_temperature_C_max": 15.00001590787548,
+  "supply_tracking_MAE_K": 1.4382648332538711e-05,
+  "supply_tracking_RMSE_K": 1.4408420279881048e-05,
+  "supply_tracking_P95_abs_K": 1.582118331100446e-05,
+  "supply_error_over_1K_longest_s": 0.0,
+  "coupling_L1_relative_error": 7.283868789139717e-10,
+  "coupling_interval_P95_abs_relative_error": 2.425138196808735e-09,
+  "MLP_extrapolated_fraction": 1.0,
+  "checks": {
+    "finite_outputs": true,
+    "warmup_stable": true,
+    "no_silent_reset": true,
+    "coupling_L1_error_le_2pct": true,
+    "coupling_interval_P95_le_5pct": true,
+    "supply_error_P95_le_0p5K": true,
+    "supply_error_over_1K_longest_le_600s": true,
+    "MLP_inputs_within_normalization_bounds": false,
+    "component_powers_nonnegative_with_1W_tolerance": true,
+    "pump_efficiencies_within_0_to_1_with_tolerance": true,
+    "condenser_supply_not_below_wet_bulb_by_more_than_0p5K": true
+  },
+  "accepted_normal_data": false,
+  "wall_seconds": 7.003638982772827,
+  "active_counts": [
+    1
+  ],
+  "mode_counts": {
+    "MC": 86400.0
+  },
+  "switch_events": 0,
+  "count_change_events": 0
+}

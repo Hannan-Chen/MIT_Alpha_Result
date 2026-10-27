@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "assertions": 832,
+  "case_reports": [
+    {
+      "case_id": "R100_fixed",
+      "status": "completed",
+      "accepted": true,
+      "energy_kWh": 14571.87332232702,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": []
+    },
+    {
+      "case_id": "R100_dynamic",
+      "status": "completed",
+      "accepted": false,
+      "energy_kWh": 14334.94009387641,
+      "events": 1,
+      "counts": [
+        1,
+        2
+      ],
+      "failed_checks": [
+        "pump_efficiencies_within_0_to_1_with_tolerance"
+      ]
+    },
+    {
+      "case_id": "R150_fixed",
+      "status": "completed",
+      "accepted": true,
+      "energy_kWh": 16745.811692589512,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": []
+    },
+    {
+      "case_id": "R150_dynamic",
+      "status": "completed",
+      "accepted": true,
+      "energy_kWh": 16745.811692589512,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": []
+    },
+    {
+      "case_id": "R200_fixed",
+      "status": "completed",
+      "accepted": true,
+      "energy_kWh": 21296.424890594182,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": []
+    },
+    {
+      "case_id": "R200_dynamic",
+      "status": "completed",
+      "accepted": true,
+      "energy_kWh": 21296.424890594182,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": []
+    },
+    {
+      "case_id": "R50_fixed",
+      "status": "completed",
+      "accepted": false,
+      "energy_kWh": 13369.425334884727,
+      "events": 0,
+      "counts": [
+        2
+      ],
+      "failed_checks": [
+        "MLP_inputs_within_normalization_bounds"
+      ]
+    },
+    {
+      "case_id": "R50_dynamic",
+      "status": "completed",
+      "accepted": false,
+      "energy_kWh": 7884.592110757439,
+      "events": 0,
+      "counts": [
+        1
+      ],
+      "failed_checks": [
+        "MLP_inputs_within_normalization_bounds"
+      ]
+    }
+  ],
+  "method": "Two separately audited immutable batches; original six results unchanged, appended two new rescale-50 results"
+}

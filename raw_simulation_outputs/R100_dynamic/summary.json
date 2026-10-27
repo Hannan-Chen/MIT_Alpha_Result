@@ -1,0 +1,65 @@
+{
+  "case": {
+    "case_id": "R100_dynamic",
+    "source_case": "R100",
+    "rescale_factor": 100,
+    "policy": "dynamic",
+    "fixed_mode": "MC",
+    "deltaT_K": 6.0,
+    "supply_setpoint_C": 15.0,
+    "feedback_s": 30,
+    "do_step_s": 10,
+    "input_grid_s": 300,
+    "duration_s": 86400,
+    "tolerance": 0.0001
+  },
+  "status": "completed",
+  "duration_s": 86400.0,
+  "warmup_s": 7200.0,
+  "rows_internal_day": 8640,
+  "rows_300s": 288,
+  "plant_energy_kWh": 14334.940093875675,
+  "component_energy_kWh": {
+    "P_Chillers_sum": 8701.227345928055,
+    "P_CHWPs_sum": 1246.1457168266395,
+    "P_CDWPs_sum": 3860.100164454312,
+    "P_CTfans_sum": 527.4668666666668
+  },
+  "Q_request_energy_kWh": 72836.00288055833,
+  "Q_hyd_energy_kWh": 72823.91155666164,
+  "energy_weighted_plant_COP": 5.080168530859382,
+  "peak_endpoint_plant_power_W": 691686.5838412557,
+  "supply_temperature_C_min": 14.999983874930251,
+  "supply_temperature_C_max": 20.859502843750477,
+  "supply_tracking_MAE_K": 0.0015511676289525766,
+  "supply_tracking_RMSE_K": 0.08132725956894214,
+  "supply_tracking_P95_abs_K": 3.790771009732907e-05,
+  "supply_error_over_1K_longest_s": 30.0,
+  "coupling_L1_relative_error": 0.0003104432537539732,
+  "coupling_interval_P95_abs_relative_error": 2.0783526170218215e-09,
+  "MLP_extrapolated_fraction": 0.0,
+  "checks": {
+    "finite_outputs": true,
+    "warmup_stable": true,
+    "no_silent_reset": true,
+    "coupling_L1_error_le_2pct": true,
+    "coupling_interval_P95_le_5pct": true,
+    "supply_error_P95_le_0p5K": true,
+    "supply_error_over_1K_longest_le_600s": true,
+    "MLP_inputs_within_normalization_bounds": true,
+    "component_powers_nonnegative_with_1W_tolerance": true,
+    "pump_efficiencies_within_0_to_1_with_tolerance": false,
+    "condenser_supply_not_below_wet_bulb_by_more_than_0p5K": true
+  },
+  "accepted_normal_data": false,
+  "wall_seconds": 6.568155527114868,
+  "active_counts": [
+    1,
+    2
+  ],
+  "mode_counts": {
+    "MC": 86400.0
+  },
+  "switch_events": 1,
+  "count_change_events": 1
+}

@@ -1,0 +1,5 @@
+rescale_factor,mean_requested_cooling_MW,fixed_energy_MWh,dynamic_energy_MWh,relative_dynamic_change_pct,fixed_quality_pass,dynamic_quality_pass
+50,1.51741672668,13.3694253349,7.88459211076,-41.0251980675,False,False
+100,3.03483345336,14.5718733223,14.3349400939,-1.62596272428,True,False
+150,4.55225018003,16.7458116926,16.7458116926,0,True,True
+200,6.06966690671,21.2964248906,21.2964248906,0,True,True

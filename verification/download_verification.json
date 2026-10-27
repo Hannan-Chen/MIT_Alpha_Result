@@ -1,0 +1,15 @@
+{
+  "batches": [
+    {
+      "remote_hash_equal": true,
+      "sha256": "cd25174ce4ec8b0d768e4db5dfccb0710aa803066931350e6705ef8d94b3dd55",
+      "bytes": 24052472
+    },
+    {
+      "remote_hash_equal": true,
+      "sha256": "87204edf1244af878a30701fd8b7fb71d9c6d146c1c1365587ebd80edce59b00",
+      "bytes": 15676350
+    }
+  ],
+  "all_remote_hashes_equal": true
+}

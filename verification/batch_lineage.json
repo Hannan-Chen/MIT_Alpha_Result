@@ -1,0 +1,29 @@
+{
+  "status": "assembled_after_two_separate_frozen_batches",
+  "rescale_factors": [
+    50,
+    100,
+    150,
+    200
+  ],
+  "formal_runs": 8,
+  "new_runs_this_request": 2,
+  "extra_artificial_scenarios": 0,
+  "batches": [
+    {
+      "name": "mit_alpha_rescale_20261027_final",
+      "protocol_sha256": "8f8493e19372899b6dd50aed09c752e361c80709b12b6f76cd48832ca2b8c1d2",
+      "frozen_protocol_sha256": "225e5cbf23676024427915dfba09cf9f100cf180cbd4c563c7e6605c2140eadd",
+      "formal_results_sha256": "6f93b9076e3dbfc7dac68c78e483584a8507ecd196acda499727f93641a3530e",
+      "audit_assertions": 568
+    },
+    {
+      "name": "mit_alpha_rescale50_20261027_final",
+      "protocol_sha256": "d7e2a58632050c803855cbe9693372fa664180b8c636aadb613f178c6b0378c6",
+      "frozen_protocol_sha256": "59009a023e20ba5b8b23f6e31541411eeefb8646d8dce600894e8dc656031233",
+      "formal_results_sha256": "c0a6d323bf4cc377549151222c0772109c98fb96df43541ea624651609b5229d",
+      "audit_assertions": 264
+    }
+  ],
+  "original_six_trajectories_unchanged": true
+}

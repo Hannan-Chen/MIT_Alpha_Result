@@ -1,0 +1,135 @@
+{
+  "dataset": "MIT-Alpha four-rescale fixed/dynamic simulations",
+  "date": "2026-10-27",
+  "rescale_factors": [
+    50,
+    100,
+    150,
+    200
+  ],
+  "formal_runs": 8,
+  "source_days": 1,
+  "extra_artificial_scenarios": 0,
+  "time_zone": "America/New_York",
+  "source_GPU_average_W": 30348.334533565976,
+  "source_GPU_energy_kWh": 728.3600288055834,
+  "wet_bulb_min_C": 15.7125,
+  "wet_bulb_max_C": 20.2583333333,
+  "data_rows": {
+    "simulated_300s.csv": 2304,
+    "simulated_10s.csv.gz": 69120,
+    "run_summary.csv": 8,
+    "control_decisions_300s.csv": 2304,
+    "switch_events.csv": 1,
+    "equipment_power_endpoints_10s.csv.gz": 69120,
+    "equipment_power_endpoints_300s.csv": 2304,
+    "component_power_300s.csv": 2304,
+    "component_energy_summary.csv": 8
+  },
+  "time_semantics": "300 s source GPU averages; hourly wet bulb interpolated at interval centers and held within each 300 s block; 30 s supply-feedback updates; 10 s FMI communication; supervisory decisions each 300 s; FMU internal integration is separate",
+  "load_adapter": "Q=rescale_factor*GPU_W; mass=Q/(4180*6); return_K=previous_true_supply_K+6",
+  "quality_passed_runs": 5,
+  "quality_rejected_runs": [
+    "R50_fixed",
+    "R50_dynamic",
+    "R100_dynamic"
+  ],
+  "independent_raw_audit_checks": 832,
+  "controller_bank": "MC count 1/2, complete native linked actions; no claim of full Alpha maximum capacity",
+  "raw_archive_sha256": [
+    "cd25174ce4ec8b0d768e4db5dfccb0710aa803066931350e6705ef8d94b3dd55",
+    "87204edf1244af878a30701fd8b7fb71d9c6d146c1c1365587ebd80edce59b00"
+  ],
+  "provenance_hashes": {
+    "inputs/source_power_1s.csv": "2b846f50951d0d7841cdfb90f653621171ee2ba40aec619a0d1af8e3d8933784",
+    "inputs/weather_hourly.csv": "9160845c7a42c9c6ef67e547453626c2aa2b13fbf196ff827a6d05093703d726",
+    "inputs/source_300s.csv": "946664ec8cc15e3ffd8c8755ecf5624ed60585a7216f75fc144a6d43059438b5",
+    "upstream/Resources/AlphaDataCenterCooling_FMU.fmu": "55c7723db514fea0b53566c67ca4f03d1ff3214b9808b97e5857e16de6302554",
+    "code/run_six.py": "929d4e1455c7fb2ecb9899f7ed30490a7ad4fa07e0aeb5fb8c374b59d2cdbe10"
+  },
+  "power_outputs": {
+    "category_sums": {
+      "chiller": "P_Chillers_sum",
+      "chw_pump": "P_CHWPs_sum",
+      "cw_pump": "P_CDWPs_sum",
+      "tower_fan": "P_CTfans_sum"
+    },
+    "individual_chillers": [
+      "Pchi1",
+      "Pchi2",
+      "Pchi3",
+      "Pchi4",
+      "Pchi5",
+      "Pchi6"
+    ],
+    "individual_tower_fans": [
+      "Pfan_CT1_01",
+      "Pfan_CT1_02",
+      "Pfan_CT2_01",
+      "Pfan_CT2_02",
+      "Pfan_CT3_01",
+      "Pfan_CT3_02",
+      "Pfan_CT4_01",
+      "Pfan_CT4_02",
+      "Pfan_CT5_01",
+      "Pfan_CT5_02",
+      "Pfan_CT6_01",
+      "Pfan_CT6_02"
+    ],
+    "individual_pump_power": "Not exposed by this FMU; no artificial allocation",
+    "heat_exchanger_electric_power": "No independent FMU power port; no value invented",
+    "semantics": "Four category interval means and energies use saved start/end trapezoids. Individual native device powers are exported only as endpoints; no unsupported interval means inferred."
+  },
+  "raw_batches": [
+    {
+      "name": "mit_alpha_rescale_20261027_final",
+      "protocol_sha256": "8f8493e19372899b6dd50aed09c752e361c80709b12b6f76cd48832ca2b8c1d2",
+      "frozen_protocol_sha256": "225e5cbf23676024427915dfba09cf9f100cf180cbd4c563c7e6605c2140eadd",
+      "formal_results_sha256": "6f93b9076e3dbfc7dac68c78e483584a8507ecd196acda499727f93641a3530e",
+      "audit_assertions": 568
+    },
+    {
+      "name": "mit_alpha_rescale50_20261027_final",
+      "protocol_sha256": "d7e2a58632050c803855cbe9693372fa664180b8c636aadb613f178c6b0378c6",
+      "frozen_protocol_sha256": "59009a023e20ba5b8b23f6e31541411eeefb8646d8dce600894e8dc656031233",
+      "formal_results_sha256": "c0a6d323bf4cc377549151222c0772109c98fb96df43541ea624651609b5229d",
+      "audit_assertions": 264
+    }
+  ],
+  "published_export_audit_checks": 648,
+  "original_six_raw_results_unchanged": true,
+  "warmup": {
+    "duration_s_each_run": 7200,
+    "all_eight_runs_passed": true,
+    "held_inputs": "First 300 s requested cooling and wet bulb; mass flow fixed by Q/(4180*6)",
+    "return_temperature": "Continues to track previous true supply + 6 K",
+    "criteria": {
+      "final_30min_supply_range_max_K": 0.1,
+      "adjacent_15min_mean_plant_power_relative_difference_max": 0.01
+    },
+    "extension_rule_hours": [
+      2,
+      4,
+      6
+    ],
+    "same_FMU_instance_and_state_retained": true,
+    "excluded_from_delivered_rows_energy_and_COP": true,
+    "raw_phase_label": "warmup"
+  },
+  "public_release_scope": {
+    "included": "Generated simulation outputs and English documentation only",
+    "source_data_redistributed": false,
+    "excluded_tables": [
+      "source_300s.csv",
+      "load_requests_300s.csv"
+    ],
+    "excluded_original_GPU_power_columns": [
+      "P_GPU_source_mean_W",
+      "Q_request_source_GPU_mean_W",
+      "gpu_power_mean_W",
+      "total_W"
+    ],
+    "boundary_semantics": "Rescaled cooling requests and implemented model boundary values remain as experimental generation context; original job GPU power columns are omitted",
+    "source_reference": "https://registry.opendata.aws/dcc/"
+  }
+}

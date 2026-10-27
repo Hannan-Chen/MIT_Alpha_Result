@@ -1,0 +1,29 @@
+{
+  "original_six_raw_results_unchanged": true,
+  "old_delivery_backup_files_verified": 53,
+  "new_formal_runs": 2,
+  "total_formal_runs": 8,
+  "rescale_factors": [
+    50,
+    100,
+    150,
+    200
+  ],
+  "extra_artificial_scenarios": 0,
+  "raw_audit_checks": 832,
+  "published_table_checks": 648,
+  "independent_source_days": 1,
+  "rejected_runs": [
+    "R50_fixed",
+    "R50_dynamic",
+    "R100_dynamic"
+  ],
+  "component_categories": [
+    "chillers",
+    "chilled-water pumps",
+    "condenser-water pumps",
+    "tower fans"
+  ],
+  "native_individual_power_channels": 18,
+  "individual_pump_powers_invented": false
+}

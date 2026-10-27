@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "retained_table_checks": 57,
+  "original_source_data_uploaded": false,
+  "source_only_tables_excluded": true,
+  "original_GPU_power_columns_excluded": true,
+  "generated_experiment_values_preserved": true,
+  "English_source_and_extracted_zip_compile": true,
+  "English_pages": 9
+}

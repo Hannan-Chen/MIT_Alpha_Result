@@ -1,0 +1,128 @@
+file,column,unit,description_en,description_zh
+simulated_300s.csv,run_id,1,Unique simulation identity,仿真运行标识
+simulated_300s.csv,rescale_factor,1,Dimensionless multiplier applied to source GPU power,源 GPU 功率的无量纲缩放系数
+simulated_300s.csv,policy,1,fixed or dynamic complete action-template policy,固定或动态完整设备模板策略
+simulated_300s.csv,source_group_id,1,All eight trajectories share this one source-day group,八条轨迹共用的单一源日分组
+simulated_300s.csv,source_day,date,Measured GPU source date in America/New_York,GPU 实测数据的纽约时区源日期
+simulated_300s.csv,sample_id,1,Zero-based 300 s interval index,从零开始的五分钟区间编号
+simulated_300s.csv,elapsed_start_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_300s.csv,elapsed_end_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_300s.csv,requested_cooling_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,delivered_cooling_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,chilled_water_massflow_mean_kg_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_300s.csv,wet_bulb_mean_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_300s.csv,return_temperature_mean_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_300s.csv,supply_temperature_end_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_300s.csv,supply_setpoint_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_300s.csv,plant_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,active_chiller_count,1,Sum of implemented CHI01..CHI06 Boolean commands,实际实施的 CHI01 至 CHI06 布尔命令总和
+simulated_300s.csv,mode,1,Cooling mode; MC in all eight observed-weather runs,制冷模式，本次八个运行全部为 MC
+simulated_300s.csv,relative_heat_error,1,(integrated delivered heat - requested heat) / requested heat,实际换热积分与请求冷量积分之差除以请求冷量积分
+simulated_300s.csv,chiller_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,chw_pump_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,cw_pump_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,tower_fan_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_300s.csv,utc_time_start,ISO 8601,Timestamp with explicit UTC offset,带 UTC 时差的时间戳
+simulated_300s.csv,utc_time_end,ISO 8601,Timestamp with explicit UTC offset,带 UTC 时差的时间戳
+simulated_300s.csv,local_time_start,ISO 8601,Timestamp with explicit UTC offset,带 UTC 时差的时间戳
+simulated_300s.csv,active_chiller_ids,1,Pipe-separated identities of commanded-on chillers,以竖线分隔的运行冷机标识
+simulated_300s.csv,flag_mlp_extrapolation,Boolean,Any head-MLP input outside normalization bounds in this interval,该区间内扬程 MLP 输入是否越过归一化范围
+simulated_300s.csv,flag_pump_efficiency,Boolean,"Any pump efficiency outside [-0.01,1.01] in this interval","该区间任一泵效率是否超出 [-0.01,1.01]"
+simulated_300s.csv,supply_error_abs_max_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_300s.csv,run_quality_pass,Boolean,Entire run passes all inherited quality gates; not field validation,整条运行通过全部既定质量门槛，不代表现场验证
+simulated_300s.csv,run_quality_failures,1,Semicolon-separated failed run-level quality gates,以分号分隔的整条运行不合格门槛
+simulated_10s.csv.gz,run_id,1,Unique simulation identity,仿真运行标识
+simulated_10s.csv.gz,rescale_factor,1,Dimensionless multiplier applied to source GPU power,源 GPU 功率的无量纲缩放系数
+simulated_10s.csv.gz,policy,1,fixed or dynamic complete action-template policy,固定或动态完整设备模板策略
+simulated_10s.csv.gz,source_group_id,1,All eight trajectories share this one source-day group,八条轨迹共用的单一源日分组
+simulated_10s.csv.gz,elapsed_start_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_10s.csv.gz,elapsed_end_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_10s.csv.gz,requested_cooling_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,delivered_cooling_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,delivered_cooling_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chilled_water_massflow_kg_s,s,Elapsed target-day interval boundary; warmup excluded,不含预热的目标日区间边界时间
+simulated_10s.csv.gz,wet_bulb_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_10s.csv.gz,return_temperature_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_10s.csv.gz,supply_temperature_end_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_10s.csv.gz,supply_setpoint_K,K,"Water/air temperature, or temperature error in kelvin; end means endpoint, mean means interval mean",水温或气温，误差为 K；end 为步末，mean 为区间平均
+simulated_10s.csv.gz,plant_power_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,plant_power_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,plant_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chiller_power_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chiller_power_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chiller_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,active_chiller_count,1,Sum of implemented CHI01..CHI06 Boolean commands,实际实施的 CHI01 至 CHI06 布尔命令总和
+simulated_10s.csv.gz,active_chiller_ids,1,Pipe-separated identities of commanded-on chillers,以竖线分隔的运行冷机标识
+simulated_10s.csv.gz,mode,1,Cooling mode; MC in all eight observed-weather runs,制冷模式，本次八个运行全部为 MC
+simulated_10s.csv.gz,flag_mlp_extrapolation,Boolean,Any head-MLP input outside normalization bounds in this interval,该区间内扬程 MLP 输入是否越过归一化范围
+simulated_10s.csv.gz,flag_pump_efficiency,Boolean,"Any pump efficiency outside [-0.01,1.01] in this interval","该区间任一泵效率是否超出 [-0.01,1.01]"
+simulated_10s.csv.gz,pump_efficiency_min,1,Minimum across native pump-efficiency outputs at step endpoint,该步末原生各泵效率输出的最小值
+simulated_10s.csv.gz,pump_efficiency_max,1,Maximum across native pump-efficiency outputs at step endpoint,该步末原生各泵效率输出的最大值
+simulated_10s.csv.gz,run_quality_pass,Boolean,Entire run passes all inherited quality gates; not field validation,整条运行通过全部既定质量门槛，不代表现场验证
+simulated_10s.csv.gz,chw_pump_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chw_pump_power_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,chw_pump_power_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,cw_pump_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,cw_pump_power_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,cw_pump_power_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,tower_fan_power_mean_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,tower_fan_power_start_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+simulated_10s.csv.gz,tower_fan_power_end_W,W,Thermal/electrical power; requested cooling is held; mean uses interval integration; start/end are endpoints,热功率或电功率；请求冷负荷按区间保持，mean 来自积分，start/end 为端点值
+equipment_power_endpoints_10s.csv.gz,run_id,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_10s.csv.gz,rescale_factor,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_10s.csv.gz,policy,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_10s.csv.gz,elapsed_end_s,s,Target-day endpoint time excluding warmup,不含预热的目标日步末时间
+equipment_power_endpoints_10s.csv.gz,active_chiller_count,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_10s.csv.gz,run_quality_pass,Boolean,Whole-run original quality gates,整条运行的原质量门槛
+equipment_power_endpoints_10s.csv.gz,Pchi1_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pchi2_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pchi3_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pchi4_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pchi5_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pchi6_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT1_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT1_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT2_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT2_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT3_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT3_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT4_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT4_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT5_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT5_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT6_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,Pfan_CT6_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,P_Chillers_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,P_CHWPs_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,P_CDWPs_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,P_CTfans_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_10s.csv.gz,plant_power_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,run_id,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_300s.csv,rescale_factor,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_300s.csv,policy,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_300s.csv,elapsed_end_s,s,Target-day endpoint time excluding warmup,不含预热的目标日步末时间
+equipment_power_endpoints_300s.csv,active_chiller_count,1,"Run identity, policy, rescale factor or active count",运行标识、策略、缩放系数或台数
+equipment_power_endpoints_300s.csv,run_quality_pass,Boolean,Whole-run original quality gates,整条运行的原质量门槛
+equipment_power_endpoints_300s.csv,Pchi1_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pchi2_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pchi3_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pchi4_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pchi5_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pchi6_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT1_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT1_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT2_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT2_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT3_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT3_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT4_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT4_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT5_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT5_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT6_01_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,Pfan_CT6_02_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,P_Chillers_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,P_CHWPs_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,P_CDWPs_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,P_CTfans_sum_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
+equipment_power_endpoints_300s.csv,plant_power_end_W,W,"Native FMU endpoint electrical power, not an interval mean; plant total is a derived sum",原生 FMU 步末电功率，不是区间平均；plant 总功率为求和派生
